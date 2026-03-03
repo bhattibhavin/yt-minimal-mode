@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "PinNote – Sticky Notes for Every Website",
+  "version": "2.0.0",
+  "description": "Domain & page-level sticky notes that stay where you leave them. Fast, private, and always there.",
+  "permissions": ["storage", "tabs"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "PinNote",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'"
+  }
+}

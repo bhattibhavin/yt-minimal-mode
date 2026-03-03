@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PinNote</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div id="pn-popup">
+
+    <header id="pn-popup-header">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M9.5 1.5L14.5 6.5L11 8.5L8.5 11L7 9.5L4 12.5L3.5 12L6.5 9L5 7.5L7.5 5L9.5 1.5Z" fill="#F5C842" opacity="0.95"/>
+        <path d="M5 7.5L8.5 11" stroke="#F5C842" stroke-width="1.2"/>
+      </svg>
+      <span id="pn-title">PinNote</span>
+    </header>
+
+    <div id="pn-domain-row">
+      <span id="pn-domain-badge" aria-label="Current domain">—</span>
+    </div>
+
+    <div id="pn-page-row">
+      <span id="pn-page-label" aria-label="Current page path">—</span>
+    </div>
+
+    <div id="pn-actions">
+      <button id="pn-toggle-btn" class="pn-btn pn-btn-primary" aria-label="Show or hide the sticky note">
+        Show Note
+      </button>
+      <button id="pn-clear-btn" class="pn-btn pn-btn-ghost" aria-label="Clear current tab's note">
+        Clear Note
+      </button>
+    </div>
+
+    <div id="pn-status-row">
+      <span id="pn-status-dot"></span>
+      <span id="pn-status-text">Loading…</span>
+    </div>
+
+    <footer id="pn-popup-footer">PinNote V2</footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

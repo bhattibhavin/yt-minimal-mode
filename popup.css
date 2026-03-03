@@ -1,0 +1,138 @@
+/* popup.css – PinNote V2 */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 13px;
+  background: #1a1a2e;
+  color: #e0e0f0;
+  min-width: 240px;
+  max-width: 260px;
+}
+
+#pn-popup {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Header */
+#pn-popup-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 16px 10px;
+  border-bottom: 1px solid #2a2a4a;
+}
+
+#pn-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+
+/* Domain row */
+#pn-domain-row {
+  padding: 10px 16px 2px;
+}
+
+#pn-domain-badge {
+  display: inline-block;
+  background: #2a2a4a;
+  border: 1px solid #3a3a6a;
+  border-radius: 99px;
+  padding: 3px 10px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #F5C842;
+  letter-spacing: 0.01em;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Page row */
+#pn-page-row {
+  padding: 4px 16px 10px;
+}
+
+#pn-page-label {
+  font-size: 10.5px;
+  color: #7070a0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  max-width: 220px;
+}
+
+/* Actions */
+#pn-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 4px 16px 10px;
+}
+
+.pn-btn {
+  width: 100%;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.14s, opacity 0.14s;
+  font-family: inherit;
+}
+
+.pn-btn-primary {
+  background: #F5C842;
+  color: #1a1a00;
+}
+.pn-btn-primary:hover { background: #e0b800; }
+.pn-btn-primary:focus-visible { outline: 2px solid #F5C842; outline-offset: 2px; }
+
+.pn-btn-ghost {
+  background: #2a2a4a;
+  color: #a0a0c0;
+  border: 1px solid #3a3a6a;
+}
+.pn-btn-ghost:hover { background: #33334d; color: #e0e0f0; }
+.pn-btn-ghost:focus-visible { outline: 2px solid #7070c0; outline-offset: 2px; }
+
+/* Status */
+#pn-status-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 16px 12px;
+}
+
+#pn-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #3a3a5c;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+#pn-status-dot.active { background: #4ade80; }
+#pn-status-dot.hidden { background: #F5C842; }
+
+#pn-status-text {
+  font-size: 11px;
+  color: #6060a0;
+}
+
+/* Footer */
+#pn-popup-footer {
+  font-size: 10px;
+  color: #3a3a5c;
+  text-align: center;
+  padding: 6px 0 10px;
+  border-top: 1px solid #2a2a4a;
+  letter-spacing: 0.04em;
+}
