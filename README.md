@@ -35,7 +35,7 @@ No account. No sync. No tracking. Just notes.
 2. Open Chrome and go to `chrome://extensions` (or `edge://extensions` for Edge)
 3. Enable **Developer mode** (toggle in the top-right)
 4. Click **Load unpacked**
-5. Select the `green-lizard` folder
+5. Select the **root folder** of the cloned repo (the folder containing `manifest.json`)
 6. The PinNote icon appears in your toolbar — you're ready
 
 ---
@@ -58,7 +58,7 @@ No account. No sync. No tracking. Just notes.
 ## File Structure
 
 ```
-green-lizard/
+repo root/
 ├── manifest.json     # Extension config (Manifest V3)
 ├── content.js        # Core logic — Shadow DOM, notes, themes, SPA observer
 ├── popup.html        # Toolbar popup UI
@@ -66,7 +66,8 @@ green-lizard/
 ├── popup.js          # Popup logic
 ├── icon16.png        # Toolbar icon
 ├── icon48.png        # Extensions page icon
-└── icon128.png       # Chrome Web Store icon
+├── icon128.png       # Chrome Web Store icon
+└── README.md         # This file
 ```
 
 ---
@@ -125,8 +126,8 @@ MIT — free to use, modify, and distribute.
 ## Contributing
 
 1. Fork the repo
-2. Make your changes in the `green-lizard` folder
-3. Load unpacked to test locally
+2. Make your changes directly in the root folder
+3. Load unpacked to test locally (select the repo root folder)
 4. Open a pull request
 
 ---
